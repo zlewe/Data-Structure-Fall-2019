@@ -6,8 +6,6 @@
 
 - *Two Algorithms implemented: Naive Trial Division, Miller-Rabin Test (Deterministic SPRP test)*
 
-
-
-___
-###### Copyright @2019 Ewe Zu Lin
-###### Distributed under GNU GPL v3.0
+---
+> ###### Copyright @2019 Ewe Zu Lin. Distributed under GNU GPL v3.0
+ 
