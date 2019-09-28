@@ -3,7 +3,16 @@
 // ds_hw1_warm_up
 //
 #include "PrimeChecker.h"
+/************************************************************************************
+Naive Primality Test
 
+1. Simple Primality Test
+2. Slightly Optimised Simple Primality Test
+----------------------------------
+Implementation by Ewe Zu Lin 
+Copyright @2019
+Distributed under GNU GPL v3.0
+*************************************************************************************/
 unsigned long PRIMECHECKER::PrimeChecker(unsigned long a, unsigned long b){
 	unsigned long count = 0;
 
@@ -16,15 +25,11 @@ unsigned long PRIMECHECKER::PrimeChecker(unsigned long a, unsigned long b){
 
 bool PRIMECHECKER::isPrime(unsigned long n){
 
-	bool flag = true;
-	for(unsigned long i = 2; i*i <= n; i++){
-		if(n % i == 0){
-          		flag = false;
-			break;
-		}
-	}
+	for(unsigned long i = 2; i*i <= n; i++)
+		if(n % i == 0)
+          	return false;
 
-	return flag;
+	return true;
 }
 
 bool PRIMECHECKER::isPrime2(unsigned long n){

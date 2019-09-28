@@ -3,10 +3,10 @@
 // DS hw1 warm up
 //
 /************************************************************************************
-Miller-Rabin Test
-Deterministic Variant - Always holds for 64-bit integers
+Naive Primality Test
 
-Efficient M-R Test using best known SPRP bases (Jaeschke, Sinclair)
+1. Simple Primality Test
+2. Slightly Optimised Simple Primality Test
 ----------------------------------
 Implementation by Ewe Zu Lin 
 Copyright @2019
@@ -17,9 +17,8 @@ Distributed under GNU GPL v3.0
 
 class PRIMECHECKER {
 	private:
-	bool is_Prime(unsigned long);
-	bool CheckSPRP(unsigned long, unsigned long);
-	__uint128_t modular_pow(unsigned long, unsigned long, unsigned long);
+	bool isPrime(unsigned long n);
+	bool isPrime2(unsigned long n);
 
 	public:
 	unsigned long PrimeChecker(unsigned long, unsigned long);
