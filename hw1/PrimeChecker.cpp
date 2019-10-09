@@ -36,7 +36,8 @@ Distributed under GNU GPL v3.0
 #include <stdint.h>
 #define UINT32_MAX (0xffffffff)	//use for checking if n is larger than 32bit
 
-unsigned long PRIMECHECKER::PrimeChecker(unsigned long a, unsigned long b){
+unsigned long PRIMECHECKER::PrimeChecker(unsigned long a, unsigned long b)
+{
 	unsigned long count = 0;
 
 	for (unsigned long i = a; i <= b; i++)
@@ -72,6 +73,8 @@ bool PRIMECHECKER::is_Prime (unsigned long n)
 	//sprp64_base = 2, 325, 9375, 28178, 450775, 9780504, 1795265022 (Sinclair)
 
 	//base cases
+	if (n == 1)
+		return (0);
 	if (n == 2)
 		return (1);
 	if ((n & 0x1) == 0)	//even
@@ -151,7 +154,8 @@ Pseudocode:
 			return "probable prime"
 	return “composite”
 *************************************************************************************/
-bool PRIMECHECKER::CheckSPRP (unsigned long n, unsigned long a){
+bool PRIMECHECKER::CheckSPRP (unsigned long n, unsigned long a)
+{
 	unsigned long m = n-1, d, y;
 	unsigned long one = 2;
 	unsigned int r = 1;
